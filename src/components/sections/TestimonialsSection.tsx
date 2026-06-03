@@ -54,7 +54,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
         transition={{ delay: index * 0.1 }}
         className="text-4xl text-soft-gold/40 mb-4"
       >
-        "
+        &quot;
       </motion.div>
 
       {/* Review Text */}
@@ -78,6 +78,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; ind
 
       {/* Client Info */}
       <div className="flex items-center gap-4">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={testimonial.clientImage}
           alt={testimonial.clientName}
@@ -128,7 +129,7 @@ export default function TestimonialsSection() {
             variants={itemVariants}
             className="text-light-grey text-lg max-w-2xl mx-auto"
           >
-            Real feedback from brands, creators, and individuals we've worked with
+            Real feedback from brands, creators, and individuals we&apos;ve worked with
           </motion.p>
         </motion.div>
 

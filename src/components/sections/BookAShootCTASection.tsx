@@ -42,7 +42,7 @@ export default function BookAShootCTASection() {
             variants={itemVariants}
             className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            <span className="text-white">Let's Tell</span>
+            <span className="text-white">Let&apos;s Tell</span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-soft-gold via-soft-gold to-soft-gold/70">
               Your Story

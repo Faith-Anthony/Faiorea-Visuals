@@ -89,7 +89,7 @@ export default function PackagesSection() {
             variants={itemVariants}
             className="text-light-grey mb-8 max-w-2xl mx-auto"
           >
-            Tell us about your project and we'll create a personalized package that meets your specific needs and budget.
+            Tell us about your project and we&apos;ll create a personalized package that meets your specific needs and budget.
           </motion.p>
           <motion.button
             variants={itemVariants}

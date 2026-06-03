@@ -130,7 +130,7 @@ export default function FAQSection() {
           transition={{ delay: 0.6 }}
           className="text-center mt-12"
         >
-          <p className="text-light-grey mb-4">Didn't find what you're looking for?</p>
+          <p className="text-light-grey mb-4">Didn&apos;t find what you&apos;re looking for?</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
