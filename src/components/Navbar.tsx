@@ -18,6 +18,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (href: string) => {
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const navVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -60,8 +69,9 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0"
           >
-            <Link href="/" className="text-2xl font-bold text-soft-gold">
-              FAIOREA
+            <Link href="/" className="text-2xl font-bold">
+              <span className="text-soft-gold">FAIOREA</span>
+              <span className="text-white ml-1">Visuals</span>
             </Link>
           </motion.div>
 
@@ -75,12 +85,12 @@ export default function Navbar() {
                 initial="hidden"
                 animate="visible"
               >
-                <Link
-                  href={link.href}
-                  className="text-white hover:text-soft-gold transition-colors duration-300 text-sm tracking-wide"
+                <button
+                  onClick={() => handleNavClick(link.href)}
+                  className="text-white hover:text-soft-gold transition-colors duration-300 text-sm tracking-wide cursor-pointer bg-transparent border-none"
                 >
                   {link.label}
-                </Link>
+                </button>
               </motion.div>
             ))}
           </div>
@@ -134,14 +144,13 @@ export default function Navbar() {
             className="md:hidden pb-6 border-t border-soft-gold/20"
           >
             {NAVIGATION_LINKS.map((link) => (
-              <Link
+              <button
                 key={link.href}
-                href={link.href}
-                className="block py-3 text-white hover:text-soft-gold transition-colors text-sm"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => handleNavClick(link.href)}
+                className="block w-full text-left py-3 text-white hover:text-soft-gold transition-colors text-sm bg-transparent border-none cursor-pointer"
               >
                 {link.label}
-              </Link>
+              </button>
             ))}
             <motion.button
               whileHover={{ scale: 1.05 }}

@@ -35,13 +35,13 @@ export const SERVICES = [
   },
   {
     id: 3,
-    title: 'Event Coverage',
-    description: 'Full-day event documentation with storytelling approach.',
-    icon: '📹',
+    title: 'Voice Over Artist',
+    description: 'Professional voice-over services for videos, commercials, and media.',
+    icon: '🎙️',
   },
   {
     id: 4,
-    title: 'Brand Content',
+    title: 'Brand Content Creation',
     description: 'Custom content creation tailored to your brand identity.',
     icon: '🎨',
   },

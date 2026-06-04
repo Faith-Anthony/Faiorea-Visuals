@@ -14,13 +14,23 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Navbar />
-      <HeroSection />
-      <SocialProofSection />
-      <ServicesPreviewSection />
+      <section id="home">
+        <HeroSection />
+      </section>
+      <section id="about">
+        <SocialProofSection />
+      </section>
+      <section id="services">
+        <ServicesPreviewSection />
+      </section>
       <ProcessSection />
-      <ProjectsPreviewSection />
+      <section id="projects">
+        <ProjectsPreviewSection />
+      </section>
       <PackagesSection />
-      <TestimonialsSection />
+      <section id="testimonials">
+        <TestimonialsSection />
+      </section>
       <FAQSection />
       <BookAShootCTASection />
       <Footer />
